@@ -1,4 +1,5 @@
-import "./globals.css";
+import Layout from "./_components/Layout/Layout";
+import "./_styles/globals.css";
 
 export const metadata = {
   title: "Taxi 8 Support Panel",
@@ -11,8 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa">
-      <body>{children}</body>
+    <html className="w-full h-full" lang="fa">
+      <body className="w-full h-full">
+      <Layout>
+        {children}
+        </Layout>
+
+        </body>
     </html>
   );
 }
