@@ -5,10 +5,9 @@ const config: Config = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		screens: {
-			mobile_only: { max: '660px' },
-			md: '660px',
+			sm: { max: '660px' },
+			md: { min: '661px', max: '975px' },
 			lg: '976px',
-			xl: '1440px',
 		},
 
 		colors: {
@@ -38,17 +37,6 @@ const config: Config = {
 			blueText: '#2427DB',
 			blueText2: '#181BB4',
 			violetText: '#985bb7',
-		},
-		extend: {
-			fontSize: {
-				lg: '17px',
-			},
-			fontFamily: {
-				dana: ['var(--font-dana)'],
-				danaBold: ['var(--font-danaBold)'],
-				danaLight: ['var(--font-danaLight)'],
-				danaMedium: ['var(--font-danaMedium)'],
-			},
 		},
 	},
 	corePlugins: {

@@ -20,14 +20,20 @@ export const sidebarData: sidebarDataType[] = [
     subItems: [
       {
         id: 1,
-        name: "harchi",
-        path: "/harchi",
+        name: "ثبت اپراتور جدید",
+        path: "/admin/new-operator",
         icon: <AdminPanelSettingsRoundedIcon />,
       },
       {
         id: 2,
-        name: "harchi 2",
-        path: "/harchi",
+        name: "دسترسی اپراتورها",
+        path: "/admin/access-management",
+        icon: <AdminPanelSettingsRoundedIcon />,
+      },
+      {
+        id: 3,
+        name: "نمایش سفرها",
+        path: "/admin/all-trips",
         icon: <AdminPanelSettingsRoundedIcon />,
       },
     ],
@@ -37,6 +43,26 @@ export const sidebarData: sidebarDataType[] = [
     name: "مدیریت رانندگان",
     path: "/drivers",
     icon: <DirectionsCarRoundedIcon />,
+    subItems: [
+      {
+        id: 1,
+        name: 'لیست تمام راننده ها' ,
+        path: '/drivers/drivers-info',
+        icon: <DirectionsCarRoundedIcon />
+      },
+      {
+        id: 2,
+        name: 'اطلاعات راننده ها' ,
+        path: '/drivers/drivers-info',
+        icon: <DirectionsCarRoundedIcon />
+      },
+      {
+        id: 3,
+        name: 'اطلاعات رانندگان' ,
+        path: '/drivers/drivers-info',
+        icon: <DirectionsCarRoundedIcon />
+      },
+    ]
   },
   {
     id: 4,

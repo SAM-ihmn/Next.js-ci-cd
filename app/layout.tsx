@@ -1,4 +1,4 @@
-import Layout from "./_components/Layout/Layout";
+import Layout from "./_components/Layout/layout";
 import "./_styles/globals.css";
 
 export const metadata = {
@@ -12,13 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="w-full h-full" lang="fa">
+    <html className="w-full h-full bg-grayBg" lang="fa">
       <body className="w-full h-full">
-      <Layout>
-        {children}
-        </Layout>
-
-        </body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
