@@ -24,14 +24,14 @@ const page = (props: Props) => {
   return (
     <>
       <div className="flex items-center justify-end">
-        <h1 className="w-fit py-3 px-4">{"نمایش تمام سفرها"}</h1>
+        <h1 className="w-fit py-3 px-4">{"نمایش تمام راننده ها"}</h1>
       </div>
 
       <div className="w-full h-full flex flex-col gap-3 py-3">
         <div className="w-full h-[92%] flex flex-col border-x border-y-0 border-solid border-grayBorder gap-3 p-3 overflow-y-auto">
           <TripItem openModal={handleModalOpen} />
         </div>
-        <FullScreenModal
+        {/* <FullScreenModal
           open={openModal}
           handleClose={handleModalClose}
         >
@@ -42,7 +42,7 @@ const page = (props: Props) => {
           <PassengerDetails/>
           <PaymentDetails/>
           </div>
-        </FullScreenModal>
+        </FullScreenModal> */}
       </div>
     </>
   );

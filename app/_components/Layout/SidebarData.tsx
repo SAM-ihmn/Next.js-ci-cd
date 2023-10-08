@@ -47,7 +47,7 @@ export const sidebarData: sidebarDataType[] = [
       {
         id: 1,
         name: 'لیست تمام راننده ها' ,
-        path: '/drivers/drivers-info',
+        path: '/drivers/all-drivers',
         icon: <DirectionsCarRoundedIcon />
       },
       {

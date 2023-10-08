@@ -1,23 +1,36 @@
-import React from 'react'
+import React from "react";
+import ItemOptions from "./ModalItemsOptions";
+import { Divider } from "@mui/material";
 
-type Props = {}
+const TripDetails = () => {
+  // Fake Data
+  const tripData = {
+    date: "۱۴۰۲-۰۶-۲۳",
+    code: "۲۶۸۵۹۴",
+    origin: "تهران-سهروردی شمالی-بن بست بیشه",
+    distance : "میدان ونک- گاندی شمالی- پ ۳۰"
+  };
 
-const TripDetails = (props: Props) => {
   return (
-    <div className='w-full h-full flex flex-col px-2'>
-      <div className='w-full py-2 px-2 border border-solid border-grayBorder rounded-md'>
-        <div className='text-right'>{'مشخصات عمومی سفر'}</div>
-        <div className='w-full flex'>
-          <div className='w-1/2 flex justify-end'>{':تاریخ سفر'}</div>
-          <div className='w-1/2 flex justify-end'>{':کد سفر'}</div>
+    <div className="w-full h-full flex flex-col px-2">
+      <div className="w-full flex flex-col gap-3 py-2 px-2 border border-solid border-grayBorder rounded-md">
+        <div className="text-right">{"مشخصات عمومی سفر"}</div>
+        <Divider/>
+        <div className="flex flex-col gap-2">
+
+        <div className="w-full flex">
+          <ItemOptions name=":تاریخ سفر" value={tripData.date} />
+          <ItemOptions name=":کد سفر" value={tripData.code} />
         </div>
-        <div className='w-full flex'>
-          <div className='w-1/2 flex justify-end'>{':مقصد'}</div>
-        <div className='w-1/2 flex justify-end'>{':مبداء'}</div>
+        <div className="w-full flex flex-col items-end gap-2">
+          <ItemOptions name=":مبداء" value={tripData.origin} />
+          <ItemOptions name=":مقصد" value={tripData.distance} />
+        </div>
+
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TripDetails
+export default TripDetails;
