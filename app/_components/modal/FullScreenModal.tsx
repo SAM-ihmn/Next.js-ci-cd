@@ -29,14 +29,14 @@ export default function FullScreenModal(props: Props) {
           },
         }}
       >
-        <div className="w-[660px] sm:w-full h-full bg-whiteBg outline-0	">
+        <div className="w-[660px] sm:fullSize bg-whiteBg outline-0	">
           <div className="w-full px-3 py-4 flex justify-between items-center">
             <div className="w-fit cursor-pointer" onClick={handleClose}>
               <CloseOutlinedIcon />
             </div>
             <h1>{"جزئیات سفر"}</h1>
           </div>
-          <div className="w-full h-full px-3">{children}</div>
+          <div className="fullSize px-3">{children}</div>
         </div>
       </Modal>
     </div>

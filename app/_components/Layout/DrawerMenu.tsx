@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { sidebarData } from "./SidebarData";
 import { Divider } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { sidebarDataType } from "@/types/layput";
+import { sidebarDataType } from "@/types/types";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import ExpandLessRoundedIcon from "@mui/icons-material/ExpandLessRounded";
 
@@ -27,7 +27,7 @@ const DrawerMenu = (props: Props) => {
 
 
 
-  return <div className="w-full h-full flex flex-col justify-between items-center py-4">
+  return <div className="fullSize flex flex-col justify-between items-center py-4">
     <div>TAXI 8</div>
     <Divider/>
     <div className="w-full">
@@ -54,7 +54,7 @@ const DrawerMenu = (props: Props) => {
           <Divider/>
           {selected?.id === item.id && open === true ? (
             <div className="w-full flex flex-col">
-              {item.subItems?.map((subItem) => (
+              {item.subItems?.map((subItem : sidebarDataType) => (
                 <div key={subItem.id}  className="flex gap-3 items-center justify-end  pr-10 py-3  cursor-pointer md:justify-center md:px-0" onClick={() => router.push(subItem.path)}>
                     <div className="md:hidden">{subItem.name}</div>
                     <div>{subItem.icon}</div>

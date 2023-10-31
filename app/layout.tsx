@@ -1,5 +1,6 @@
 import Layout from "./_components/Layout/layout";
 import "./_styles/globals.css";
+import ThemeRegistry from "@/materialTheme/ThemeRegistry";
 
 export const metadata = {
   title: "Taxi 8 Support Panel",
@@ -12,10 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="w-full h-full bg-grayBg" lang="fa">
-      <body className="w-full h-full">
+
+    <ThemeRegistry>
+
+    <html className="fullSize bg-grayBackground" lang="fa">
+      <body className="fullSize">
         <Layout>{children}</Layout>
       </body>
     </html>
+    </ThemeRegistry>
   );
 }
