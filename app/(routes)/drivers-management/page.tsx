@@ -10,7 +10,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="fullSize flex flex-col gap-2">
+    <div className="fullSize flex flex-col gap-2 p-5">
       <ToolBar title="لیست رانندگان" hidden={true}>
         <SearchBox selectFieldTitle="نوع کاربر">
           {driverStatus.map((status, index) => (

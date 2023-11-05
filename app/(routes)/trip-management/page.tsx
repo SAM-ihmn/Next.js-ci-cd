@@ -5,7 +5,7 @@ import ToolBar from '@/app/_components/tool-bar/ToolBar'
 import SearchBox from '@/app/_components/tool-bar/SearchBox'
 import { MenuItem } from '@mui/material'
 import Table from '@/app/_components/table/Table'
-import TripRows from '@/app/_components/table/TableRow/TripRows'
+import TripRows from '@/app/_components/table/trip/TripRows'
 import {tripStatus, tripTableHeaderTitles} from '../../_components/_data/data'
 
 type Props = {}

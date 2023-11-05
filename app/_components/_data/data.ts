@@ -1,3 +1,5 @@
+import { TripDataType } from "../types/trip";
+
 type TripStatus = {
   id: number;
   status: string;
@@ -8,28 +10,31 @@ type OperatorTeam = {
   teamName: string;
 };
 
-type TripDataType = {
-  code: number;
-  status: "inProgress" | "done";
-  payment: "done" | "fail";
-  driver: {
-    name: string;
-    phone: string;
-  };
-  passenger: {
-    name: string;
-    phone: string;
-  };
-};
 
-type DriverDataType = {
+
+export type DriverDataType = {
   code: number,
   name: string,
   phoneNumber: string,
   nationalCode: string,
   drivingLicenseNumber: string,
-  disability: 'ناشنوا' | 'کم شنوا',
+  disability: 'ناشنوا' | 'کم شنوا' | 'ندارد',
   status: 'فعال' | 'در انتظار بررسی مدارک' | 'غیرفعال',
+  transActions:{
+    cardNumber: number,
+    shaba: string
+  },
+  vehicle: {
+    model: string,
+    platNumber: string
+  },
+  report: {
+    numberOfTrips: number,
+    score: string,
+    netIncome: string,
+    registeryDate: string
+  }
+
 }
 
 type PassengerData = {
@@ -439,44 +444,138 @@ export const DriversData : DriverDataType[] = [
     drivingLicenseNumber: '65983225',
     disability: 'ناشنوا',
     status: 'فعال',
+    transActions : {
+      cardNumber: 6548952375893214,
+      shaba: 'R00248665867869564355'
+    },
+    vehicle: {
+      model: 'پژو ۲۰۶',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '6/10',
+      netIncome : '260000000 RI',
+      registeryDate: '1402-12-25'
+    }
   },
   {
-    code: 2578,
+    code: 2579,
+    name: 'محمد رضوی',
+    phoneNumber: '09197124988',
+    nationalCode: '0059841277',
+    drivingLicenseNumber: '65983225',
+    disability: 'ندارد',
+    status: 'غیرفعال',
+    transActions : {
+      cardNumber: 4589621458963245,
+      shaba: 'R0000000078695000055'
+    },
+    vehicle: {
+      model: '405',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '9/10',
+      netIncome : '120000000 RI',
+      registeryDate: '1402-2-30'
+    }
+  },
+  {
+    code: 2580,
+    name: 'مرتضی احمدی ',
+    phoneNumber: '09197124988',
+    nationalCode: '0059841277',
+    drivingLicenseNumber: '65983225',
+    disability: 'ندارد',
+    status: 'در انتظار بررسی مدارک',
+    transActions : {
+      cardNumber: 4589621458963245,
+      shaba: 'R0000000078695000055'
+    },
+    vehicle: {
+      model: '405',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '9/10',
+      netIncome : '120000000 RI',
+      registeryDate: '1402-2-30'
+    }
+  },
+  {
+    code: 2581,
     name: 'امیرحسین رحیم وند',
     phoneNumber: '09197124988',
     nationalCode: '0059841277',
     drivingLicenseNumber: '65983225',
     disability: 'ناشنوا',
     status: 'فعال',
+    transActions : {
+      cardNumber: 6548952375893214,
+      shaba: 'R00248665867869564355'
+    },
+    vehicle: {
+      model: 'پژو ۲۰۶',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '6/10',
+      netIncome : '260000000 RI',
+      registeryDate: '1402-12-25'
+    }
   },
   {
-    code: 2578,
-    name: 'امیرحسین رحیم وند',
+    code: 2582,
+    name: 'محمد رضوی',
     phoneNumber: '09197124988',
     nationalCode: '0059841277',
     drivingLicenseNumber: '65983225',
-    disability: 'ناشنوا',
-    status: 'فعال',
+    disability: 'ندارد',
+    status: 'غیرفعال',
+    transActions : {
+      cardNumber: 4589621458963245,
+      shaba: 'R0000000078695000055'
+    },
+    vehicle: {
+      model: '405',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '9/10',
+      netIncome : '120000000 RI',
+      registeryDate: '1402-2-30'
+    }
   },
   {
-    code: 2578,
-    name: 'امیرحسین رحیم وند',
+    code: 2583,
+    name: 'مرتضی احمدی ',
     phoneNumber: '09197124988',
     nationalCode: '0059841277',
     drivingLicenseNumber: '65983225',
-    disability: 'ناشنوا',
-    status: 'فعال',
+    disability: 'ندارد',
+    status: 'در انتظار بررسی مدارک',
+    transActions : {
+      cardNumber: 4589621458963245,
+      shaba: 'R0000000078695000055'
+    },
+    vehicle: {
+      model: '405',
+      platNumber: `25 ${'ب'} ${'25486'}`
+    },
+    report : {
+      numberOfTrips: 52,
+      score: '9/10',
+      netIncome : '120000000 RI',
+      registeryDate: '1402-2-30'
+    }
   },
-  {
-    code: 2578,
-    name: 'امیرحسین رحیم وند',
-    phoneNumber: '09197124988',
-    nationalCode: '0059841277',
-    drivingLicenseNumber: '65983225',
-    disability: 'ناشنوا',
-    status: 'فعال',
-  }
 ]
+
 
 //******** routes/passengers-management/page.tsx ********//
 

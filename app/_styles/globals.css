@@ -28,4 +28,8 @@ h1{
   .fullSize {
     @apply w-full h-full
   }
+
+  .grayBorder {
+    @apply border border-solid border-grayBackgroundDarker rounded-md
+  }
 }
