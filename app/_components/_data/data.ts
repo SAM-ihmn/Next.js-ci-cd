@@ -50,7 +50,7 @@ type PassengerData = {
 //******** routes/operator-management/page.tsx ********//
 
 // header of table
-export const OperatorTableHeaderTitles : string[] = ['شناسه کارمند', 'نام و نام خانوادگی', 'کد ملی', 'ایمیل' , 'شماره تماس' , 'نوع کاربر', 'جزئیات'
+export const OperatorTableHeaderTitles : string[] = ['شناسه کارمند', 'نام و نام خانوادگی', 'کد ملی', 'ایمیل' , 'شماره تماس' , 'نوع کاربر'
 ]
 
 // options for searchBar
@@ -199,7 +199,6 @@ export const tripTableHeaderTitles: string[] = [
   "نام مسافر",
   "شماره تماس مسافر",
   "وضعیت سفر",
-  "جزئیات بیشتر",
 ];
 
 // options for searchBar
@@ -431,9 +430,9 @@ export const TripData: TripDataType[] = [
 ];
 
 //******** routes/drivers-management/page.tsx ********//
-export const driverStatus:string[] = ['فعال', 'در انتظار بررسی مدارک', 'غیرفعال']
+export const driverStatus:string[] = ['فعال', 'بررسی مدارک', 'غیرفعال']
 
-export const driverHeaderTitles : string[] = ['کد راننده', 'نام و نام خانوادگی', 'شماره تماس', 'کد ملی', 'شماره گواهینامه', 'معلولیت', 'وضعیت راننده', 'جزئیات بیشتر']
+export const driverHeaderTitles : string[] = ['کد راننده', 'نام و نام خانوادگی', 'شماره تماس', 'کد ملی', 'شماره گواهینامه', 'معلولیت', 'وضعیت راننده']
 
 export const DriversData : DriverDataType[] = [
   {
@@ -579,7 +578,7 @@ export const DriversData : DriverDataType[] = [
 
 //******** routes/passengers-management/page.tsx ********//
 
-export const passengerStatus:string[] = ['فعال', 'در انتظار بررسی مدارک', 'غیرفعال']
+export const passengerStatus:string[] = ['فعال', 'بررسی مدارک', 'غیرفعال']
 
 export const passengerHeaderTitles = ['کد مسافر', 'نام و نام خانوادگی', 'شماره تماس', 'کدملی', 'معلولیت', 'جزئیات بیشتر']
 

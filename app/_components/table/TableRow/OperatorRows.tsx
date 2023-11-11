@@ -60,8 +60,6 @@ const OperatorRows = (props: Props) => {
             >
               {operator.department}
             </div>
-
-            <div className="hidden lg:flex lg:justify-center lg:items-center flex-1 text-center"><MoreIcon className="w-6 h-3"/></div>
           </div>
 
           <Divider />

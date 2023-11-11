@@ -12,6 +12,7 @@ const PassengerRows = () => {
           <div
             key={passenger.code}
             className="w-full h-fit lg:h-12 flex flex-col gap-2 lg:gap-0 lg:flex-row-reverse lg:items-center lg:rounded-none lg:shadow-none shadow-md shadow-grayText rounded-md sm:bg-white md:bg-white p-2 lg:p-0"
+            // onClick={() => openModalPage(Passenger)}
           >
             <ItemHalfWidth
               equal={true}
@@ -27,9 +28,6 @@ const PassengerRows = () => {
             <ItemFullWidth itemName={"کدملی"} itemValue={passenger.nationalCode} />
             <ItemFullWidth itemName={"معلولیت"} itemValue={passenger.disability} />
 
-            <div className="hidden lg:flex justify-center items-center flex-1 ">
-              <MoreIcon className="w-6 h-3" />
-            </div>
 
           </div>
 

@@ -22,7 +22,7 @@ const TripRows = () => {
     <div className="w-full h-[95%] flex flex-col gap-2 overflow-y-auto lg:p-2">
       {TripData.map((trip) => (
         <>
-          <div className="w-full h-fit lg:h-12 flex flex-col gap-2 lg:gap-0 lg:flex-row-reverse lg:items-center lg:rounded-none lg:shadow-none shadow-md shadow-grayText rounded-md sm:bg-white md:bg-white p-2 lg:p-0">
+          <div className="w-full h-fit lg:h-12 flex flex-col gap-2 lg:gap-0 lg:flex-row-reverse lg:items-center lg:rounded-none lg:shadow-none shadow-md shadow-grayText rounded-md sm:bg-white md:bg-white p-2 lg:p-0 cursor-pointer" onClick={() => handleDetailModal(trip)}>
             <ItemHalfWidth
               itemName="کد سفر"
               itemFirstValue={trip.code}
@@ -51,9 +51,6 @@ const TripRows = () => {
               {trip.status}
             </div>
 
-            <div className="hidden lg:flex lg:justify-center lg:items-center flex-1 text-center">
-              <MoreIcon className="w-6 h-3" onClick={() => handleDetailModal(trip)} />
-            </div>
           </div>
           <Divider className="sm:hidden md:hidden" />
         </>
