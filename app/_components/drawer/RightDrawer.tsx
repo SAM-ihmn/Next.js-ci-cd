@@ -13,20 +13,23 @@ export default function RightDrawer({state, handleClose, children} : handleDrawe
 
   return (
     <div>
-        <React.Fragment >
+        <>
           <Drawer
             anchor={'right'}
             open={state}
             onClose={handleClose}
             sx={{
-              '& .css-1160xiw-MuiPaper-root-MuiDrawer-paper ': {
-                width: '75%'
-              }
+              '& .mui-1160xiw-MuiPaper-root-MuiDrawer-paper ': {
+                width: {
+                  xs: '75%',
+                  md: '30%'
+                }
+              },
             }}
           >
             {children}
           </Drawer>
-        </React.Fragment>
+        </>
     </div>
   );
 }

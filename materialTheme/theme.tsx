@@ -24,8 +24,27 @@ declare module "@mui/material/styles" {
   }
 }
 
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true;
+    sm: true;
+    md: true;
+    lg: true;
+    xl: false
+  }
+}
+
+
 // initial theme (palette, fonts, breakpoints)
 let theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+			sm: 401,
+			md: 661,
+			lg: 1201,
+    }
+  },
   typography: {
     fontFamily: "yekan",
     fontSize: 14,
@@ -87,5 +106,7 @@ theme = createTheme(theme, {
 			}
 		},
 }});
+
+
 
 export default theme;

@@ -1,4 +1,4 @@
-import { TripDataType } from "../types/trip";
+import { TripDataType } from "../types/tripTypes";
 
 type TripStatus = {
   id: number;

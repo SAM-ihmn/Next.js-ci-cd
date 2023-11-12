@@ -3,7 +3,7 @@ import React, { useCallback, useMemo } from "react";
 import FullScreenModal from "../modal/FullScreenModal";
 import DetailsSection from "./DetailsSection";
 import ItemBox from "./ItemBox";
-import { TripDataType, TripDetailModalProps } from "../types/trip";
+import { TripDataType, TripDetailModalProps } from "../types/tripTypes";
 
 // categorized data based on selected trip from trip list
 // Moved outside to prevent recreation on each render

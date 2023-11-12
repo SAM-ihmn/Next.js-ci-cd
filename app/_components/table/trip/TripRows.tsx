@@ -7,7 +7,7 @@ import { MoreIcon } from "@/app/_assets/Icons";
 import DriverPassengerItem from "./DriverPassengerItem";
 import { ItemHalfWidth } from "../TableItems";
 import TripDetailModal from "../../trip/TripDetailModal";
-import { TripDataType } from "../../types/trip";
+import { TripDataType } from "../../types/tripTypes";
 
 const TripRows = () => {
   const [open, setOpen] = useState(false);
