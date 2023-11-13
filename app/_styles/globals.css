@@ -32,4 +32,8 @@ h1{
   .grayBorder {
     @apply border border-solid border-grayBackgroundDarker rounded-md
   }
+
+  .flex-center {
+    @apply flex justify-center items-center
+  }
 }

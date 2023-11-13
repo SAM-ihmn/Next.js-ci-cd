@@ -33,10 +33,10 @@ const ToolBar = (props: Props) => {
   return (
     <div>
       <div className="w-full h-fit flex flex-col gap-2">
-        <div className="w-full flex sm:flex-col gap-2 flex-row-reverse justify-between">
-          <div className="sm:w-full w-1/3 text-[28px] text-right">{title}</div>
+        <div className="w-full flex gap-2 flex-row-reverse justify-between items-center">
+          <div className=" w-1/2 lg:text-[28px] text-[1.3rem] text-right">{title}</div>
 
-          <div className="sm:w-full w-2/3 flex gap-2">
+          <div className=" w-1/2 flex gap-2">
             <ToolItem disable toolName="دریافت گزارش" OnClick={getReportFile}>
               <DownloadIcon className="w-6 h-6" />
             </ToolItem>

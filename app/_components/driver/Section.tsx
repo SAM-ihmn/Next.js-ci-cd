@@ -23,11 +23,6 @@ const Section = (props: Props) => {
           {userStatus}
         </div>
       </div>
-
-      {/* data of section */}
-      {data.map((item)=> {
-        
-      })}
     </div>
   );
 };

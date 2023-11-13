@@ -6,11 +6,12 @@ type Props = {
   open: boolean;
   handleClose: () => void;
   children: React.ReactNode;
-  ClassName?: string
+  ClassName?: string,
+  modalTitle: string
 };
 
 export default function FullScreenModal(props: Props) {
-  const { open, handleClose, children, ClassName } = props;
+  const { open, handleClose, children, ClassName, modalTitle } = props;
 
   return (
     <div>
@@ -35,7 +36,7 @@ export default function FullScreenModal(props: Props) {
             <div className="w-fit cursor-pointer" onClick={handleClose}>
               <CloseOutlinedIcon />
             </div>
-            <h1>{"جزئیات سفر"}</h1>
+            <h1>{modalTitle}</h1>
           </div>
           <div className={`w-full h-full  ${ClassName}`} >{children}</div>
         </div>

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { DriversData, DriverDataType } from "../../_data/data";
-import { MoreIcon } from "@/app/_assets/Icons";
 import { Button, Divider } from "@mui/material";
 import { ItemFullWidth, ItemHalfWidth } from "../TableItems";
 import FullScreenModal from "../../modal/FullScreenModal";
@@ -11,6 +10,7 @@ import theme from "@/materialTheme/theme";
 import { useRouter } from "next/navigation";
 
 const DriverRows = () => {
+  
   const router = useRouter()
   const [selectedDriver, setSelectedDriver] = useState<DriverDataType| null>(null)
   const [open, setOpen] = useState(false);
@@ -61,15 +61,16 @@ const DriverRows = () => {
           <Divider />
         </>
       ))}
-      <FullScreenModal open={open} handleClose={() => setOpen(!open)} >
-        <div className="fullSize flex flex-col justify-between">
+      <FullScreenModal open={open} handleClose={() => setOpen(!open)} modalTitle="جزئیات راننده" >
+        <div className="fullSize h-full flex flex-col gap-2 pb-2">
 
         <DriverDetail driver={selectedDriver} />
-        <div className="w-full flex gap-2 ">
-          <div className="flex-1">
+
+        <div className="w-full h-1/6 flex gap-2 pb-2 ">
+          <div className="flex-1 h-1/2">
             <Button sx={{paddingY: 1, width: '100%', backgroundColor: theme.palette.blue.main}}>{'مشاهده مدارک'}</Button>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 h-1/2">
             <Button sx={{paddingY: 1, width: '100%', backgroundColor: theme.palette.blue.main}} onClick={() => router.push(`/drivers-management/transactions/${selectedDriver?.code}`)}>{'مشاهده تراکنش ها'}</Button>
           </div>
         </div>

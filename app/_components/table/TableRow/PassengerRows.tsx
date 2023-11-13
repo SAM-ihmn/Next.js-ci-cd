@@ -1,6 +1,5 @@
 import React from "react";
-import { DriversData, PassengersData } from "../../_data/data";
-import { MoreIcon } from "@/app/_assets/Icons";
+import { PassengersData } from "../../_data/data";
 import { Divider } from "@mui/material";
 import { ItemFullWidth, ItemHalfWidth } from "../TableItems";
 

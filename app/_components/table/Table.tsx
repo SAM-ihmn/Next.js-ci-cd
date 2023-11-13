@@ -10,9 +10,9 @@ const Table = (props: Props) => {
   const { headerTitleList, children } = props;
 
   return (
-    <div className="fullSize">
+    <div className="fullSize overflow-y-scroll">
       <TableHeader headerTitleList={headerTitleList} />
-      <div className="w-full h-[95%] flex flex-col gap-2 pt-2 justify-between lg:bg-white lg:rounded-b-lg lg:shadow-md lg:overflow-y-auto shadow-grayText ">
+      <div className="w-full h-full flex flex-col gap-2 py-2 justify-between lg:bg-white lg:rounded-b-lg lg:shadow-md lg:overflow-y-auto shadow-grayText ">
         {children}
       </div>
     </div>
