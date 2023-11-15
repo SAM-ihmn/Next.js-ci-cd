@@ -32,7 +32,7 @@ const SearchBox = (props: Props) => {
   };
 
   return (
-    <div className="w-full flex flex-col lg:flex-row-reverse gap-2 bg-white p-2 shadow-md shadow-grayText rounded-lg">
+    <div className="w-full flex flex-col lg:flex-row-reverse gap-2 bg-white p-2 shadow-md shadow-grayText rounded-lg index">
       <div className={` flex lg:flex-col-reverse lg:gap-1 ${(hiddenSelectPart === true) ? 'lg:w-5/6 w-full' : 'lg:w-1/2 w-full' } `}>
         <div className={`w-3/4 lg:w-full`}>
           <TextField

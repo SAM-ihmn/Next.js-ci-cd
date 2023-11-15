@@ -17,7 +17,7 @@ const page = (props: Props) => {
   return (
     <>
     <div className='fullSize flex flex-col gap-2 '>
-      <ToolBar hidden={true} title='لیست سفرها'>
+      <ToolBar hidden={true} title='لیست سفرها' hiddenNewTicket={true}>
 
       <SearchBox selectFieldTitle="وضعیت سفر">
         {tripStatus.map((trip) => 

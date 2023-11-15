@@ -6,7 +6,7 @@ type Props = {
   driver: DriverDataType | null
 };
 
-type ItemProps = {
+export type ItemProps = {
   title: string;
   value: string;
 };
@@ -25,7 +25,7 @@ const DriverDetail = (props: Props) => {
   const {driver} = props 
 
   return (
-    <div className="h-5/6 flex flex-col gap-2 overflow-y-auto sm:pb-6">
+    <div className="flex flex-col gap-2 overflow-y-auto sm:pb-6">
       <div className="w-full p-2 border flex flex-col border-solid border-grayBackgroundDarker rounded-md gap-2">
         <div className="w-full flex flex-row-reverse justify-between py-2">
           <span>{"مشخصات راننده"}</span>

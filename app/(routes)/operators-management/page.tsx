@@ -14,7 +14,7 @@ const page = (props: Props) => {
 
   return (
     <div className="fullSize flex flex-col gap-2">
-      <ToolBar title="لیست اپراتورها">
+      <ToolBar title="لیست اپراتورها" hiddenNewTicket={true}>
         <SearchBox selectFieldTitle="نوع کاربر">
           {operatorTeams.map((team) => 
             <MenuItem value={team.id}>{team.teamName}</MenuItem>

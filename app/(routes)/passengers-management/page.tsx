@@ -11,7 +11,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="fullSize flex flex-col gap-2">
-      <ToolBar title="لیست مسافران" hidden={true}>
+      <ToolBar title="لیست مسافران" hidden={true} hiddenNewTicket={true}>
         <SearchBox hiddenSelectPart={true} selectFieldTitle="نوع مسافر"/>
       </ToolBar>
       <Table headerTitleList={passengerHeaderTitles}>

@@ -40,12 +40,11 @@ export type DriverDataType = {
 
 // -------------- passengerList component -------------- //
 
-
 export type PassengerDataType = {
-  code: number,
-  name: string,
-  nationalCode: number,
-  phoneNum: string,
-  signUpDate: string,
-  disability: boolean
+  code: number | null,
+  name: string | null,
+  nationalCode: string | null,
+  phoneNumber: string | null,
+  disability: string | null,
+  status: 'فعال' | 'بررسی مدارک'| 'غیرفعال'
 }

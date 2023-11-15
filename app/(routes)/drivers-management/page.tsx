@@ -11,7 +11,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="fullSize flex flex-col gap-2">
-      <ToolBar title="لیست رانندگان" hidden={true}>
+      <ToolBar title="لیست رانندگان" hidden={true} hiddenNewTicket={true}>
         <SearchBox selectFieldTitle="نوع کاربر">
           {driverStatus.map((status, index) => (
             <MenuItem value={index}>{status}</MenuItem>

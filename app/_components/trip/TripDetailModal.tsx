@@ -55,8 +55,8 @@ const TripDetailModal = (props: TripDetailModalProps) => {
   let B:boolean = A === true ? false : true
 
   return (
-    <FullScreenModal open={open} handleClose={handleClose}>
-      <div className="w-full h-[95%] flex flex-col gap-2 overflow-y-auto">
+    <FullScreenModal modalTitle="جزئیات سفر" open={open} handleClose={handleClose}>
+      <div className="w-full lg:h-full sm:h-5/6 flex flex-col gap-2 overflow-y-auto">
         <DetailsSection sectionTitle="مشخصات عمومی سفر" userStatus={false} >
           {ItemList.general.map((item) => (
             <ItemBox itemValue={item.itemValue} itemTitle={item.itemTitle} />

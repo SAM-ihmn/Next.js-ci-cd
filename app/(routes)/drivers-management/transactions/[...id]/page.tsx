@@ -11,7 +11,7 @@ const page = ({ params }: { params: { id: number } }) => {
 
   return (
     <div className="fullSize flex flex-col gap-2">
-    <ToolBar title="تراکنش های راننده" hidden={true}>
+    <ToolBar title="تراکنش های راننده" hidden={true } hiddenNewTicket={true}>
       <SearchBox selectFieldTitle="نوع کاربر" hiddenSelectPart={true}/>
     </ToolBar>
     <Table headerTitleList={driverTransactionsTableHeader}>
