@@ -7,9 +7,7 @@ import OperatorLoginData from "./OperatorLoginData";
 import { AccessLevel, LoginData, PersonalData } from "../types/operatorTypes";
 import OperatorAccessLevel from "./OperatorAccessLevel";
 
-type Props = {};
-
-const NewOperator = (props: Props) => {
+const NewOperator = () => {
   // states
   const initialPersonalData :PersonalData  ={
     name: null,
@@ -44,8 +42,8 @@ const NewOperator = (props: Props) => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center py-2">
-      <div className="w-full md:w-1/2 lg:w-1/2 h-full flex flex-col justify-between p-3 sm:gap-3 bg-white rounded-lg">
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2, overflowY:{xs: 'auto', md:'hidden'} }}>
+      <div className="w-full md:w-1/2 lg:w-1/2 h-full flex flex-col justify-between p-3 sm:gap-3 rounded-lg">
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1, overflowY:{xs: 'auto', md:'hidden'} }}>
           <OperatorPersonalData
             personalData={personalData}
             setPersonalData={setPersonalData}

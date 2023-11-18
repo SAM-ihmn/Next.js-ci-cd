@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import UserInfo from './UserInfo';
 import SetOperator from './SetOperator';
 import { Box } from '@mui/material';
+import TicketText from './TicketText';
 
 type Props = {}
 
@@ -32,10 +33,16 @@ const NewTicketForm = (props: Props) => {
     department: ""
   });
 
+  const [subject, setSubject] = useState("");
+  const [content, setContent] = useState("");
+
+
+
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
       <UserInfo user={user} setUser={setUser}/>
       <SetOperator responsibleOperator={responsibleOperator} setResponsibleOperator={setResponsibleOperator}/>
+      <TicketText subject={subject} setSubject={setSubject} content={content} setContent={setContent}/>
     </Box>
   )
 }

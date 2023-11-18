@@ -22,12 +22,15 @@ const UserInfo = (props: Props) => {
   const { user, setUser } = props;
   const [selectedType, setSelectedType] = useState<userType>(null);
 
+  const [error, setError] = useState(false)
+
   const handleNameField = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setUser({ ...user, name: e.target.value });
   };
 
   const handlePhoneNumber = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setUser({ ...user, phoneNumber: e.target.value });
+    setUser({ ...user, phoneNumber: e.target.value })
+
   };
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,8 +42,10 @@ const UserInfo = (props: Props) => {
     setSelectedType(type);
   };
 
+  
+
   return (
-    <Box sx={{ width: "100%", height: "100%" }}>
+    <Box sx={{ width: "100%", height: "100%", backgroundColor: theme.palette.white.main, padding: 2, borderRadius: "8px" }}>
       <Box className="text-right pb-2">{"مشخصات فردی"}</Box>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
 
@@ -57,6 +62,8 @@ const UserInfo = (props: Props) => {
             placeholder="شماره تماس"
             value={user.phoneNumber}
             onChange={(e) => handlePhoneNumber(e)}
+            error={error}
+            onError={() => setError(true)}
             sx={{ width: { xs: "100%", lg: "50%" } }}
           />
         </Box>

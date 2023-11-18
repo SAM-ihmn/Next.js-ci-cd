@@ -1,5 +1,6 @@
 "use client";
 
+import { SupportIcon } from "@/app/_assets/Icons";
 import { SectionHeader } from "@/app/_components/detailModals/SectionHeader";
 import ToolItem from "@/app/_components/tool-bar/ToolItem";
 import ItemBox from "@/app/_components/trip/ItemBox";
@@ -20,17 +21,22 @@ const page = ({ params }: { params: { id: number } }) => {
     console.log(e.target.value);
   };
   return (
-    <div className="w-full flex flex-col gap-2 p-5 overflow-hidden">
-      <div className=" w-1/2 items-start">
+    <div className="w-full h-full flex flex-col items-center gap-2 p-5">
+      <div className=" w-full items-start">
+        <div className="w-1/2">
+
         <ToolItem
           toolName="لیست تیکت ها"
           OnClick={() => router.push("/support-panel")}
-        />
+          > <SupportIcon className="w-6 h-6"/>
+          </ToolItem>
+          </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-2 overflow-y-scroll ">
-        <div className="w-full h-[85%] lg:w-2/3 flex flex-col gap-2  rounded-lg bg-white">
-          <section className="flex flex-col gap-2 p-2 overflow-y-scroll">
-            <div className="w-full flex flex-row-reverse flex-wrap grayBorder p-2">
+      <div className="w-full lg:w-1/2 flex flex-col items-center gap-2 overflow-scroll ">
+        <div className="w-full h-[85%] flex flex-col gap-2 rounded-lg ">
+
+          <section className="flex flex-col gap-2 ">
+            <div className="w-full flex flex-row-reverse flex-wrap grayBorder bg-white p-2">
               <SectionHeader headerTitle="مشخصات فردی" />
               <ItemBox itemTitle="کد ثبت" itemValue={"25"} />
               <ItemBox itemTitle="نام و نام خانوادگی" itemValue={"25"} />
@@ -38,14 +44,14 @@ const page = ({ params }: { params: { id: number } }) => {
               <ItemBox itemTitle="آدرس ایمیل" itemValue={"25"} />
             </div>
 
-            <div className="w-full flex flex-row-reverse flex-wrap grayBorder p-2">
+            <div className="w-full flex flex-row-reverse flex-wrap grayBorder bg-white p-2">
               <SectionHeader headerTitle="مشخصات تیکت" />
               <ItemBox itemTitle="موضوع" itemValue={"25"} />
               <ItemBox itemTitle="واحد مسئول" itemValue={"25"} />
             </div>
           </section>
           {/* tickets */}
-          <section className="flex flex-col gap-3 p-2">
+          <section className="flex flex-col gap-2 p-2 bg-white rounded-lg">
             {/* user message */}
             <div className="w-full flex flex-col items-start ">
               <div className="w-full lg:w-2/3 shadow-md shadow-grayText bg-grayBackground rounded-lg p-2">
@@ -139,14 +145,15 @@ const page = ({ params }: { params: { id: number } }) => {
           </section>
         </div>
       </div>
-      <section className="w-full lg:w-1/3 flex flex-row-reverse gap-2 absolute bottom-2 px-2">
+      <section className="w-full lg:w-1/2 flex flex-row-reverse gap-2 px-2">
         <TextField
+        dir="rtl"
+        fullWidth
           value={message}
           onChange={(e) => handleTextChange(e)}
-          sx={{ width: "70%" }}
           placeholder="پاسخ خود را تایپ کنید"
         />
-        <div className="flex-1 text-center rounded-md bg-powderBlue">
+        <div className="w-1/4 text-center rounded-md bg-powderBlue" onClick={() => {}}>
           {"ارسال"}
         </div>
       </section>

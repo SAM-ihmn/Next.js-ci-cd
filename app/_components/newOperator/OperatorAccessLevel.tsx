@@ -40,12 +40,14 @@ const OperatorAccessLevel = (props: Props) => {
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
+        backgroundColor: theme.palette.white.main, padding: 2, borderRadius: "8px"
       }}
     >
-      <Box className="text-right">{"تعیین سطح دسترسی"}</Box>
+      <Box dir='rtl'>{"تعیین سطح دسترسی"}</Box>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         {accessLevelDefine.map((item) => (
           <Box
+          
             key={item.id}
             sx={{
               backgroundColor: selectedItem.some(

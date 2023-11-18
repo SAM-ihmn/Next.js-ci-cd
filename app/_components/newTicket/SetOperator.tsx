@@ -1,5 +1,6 @@
 "use client";
 
+import theme from "@/materialTheme/theme";
 import { Box, TextField } from "@mui/material";
 import React, { useState } from "react";
 
@@ -34,7 +35,7 @@ const SetOperator = (props: Props) => {
   };
 
   return (
-    <Box sx={{ width: "100%", height: "100%" }}>
+    <Box sx={{ width: "100%", height: "100%", backgroundColor: theme.palette.white.main, padding: 2, borderRadius: "8px" }}>
       <Box className="text-right pb-2">{"مشخصات اپراتور"}</Box>
       <Box
         sx={{

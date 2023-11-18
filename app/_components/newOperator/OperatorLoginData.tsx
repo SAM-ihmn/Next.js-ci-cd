@@ -1,6 +1,7 @@
 import React from "react";
 import { LoginData } from "../types/operatorTypes";
 import { Box, TextField } from "@mui/material";
+import theme from "@/materialTheme/theme";
 
 type Props = {
   loginData: LoginData;
@@ -24,7 +25,7 @@ const OperatorLoginData = (props: Props) => {
   };
 
   return (
-    <Box sx={{ width: "100%", height: "100%" }}>
+    <Box sx={{ width: "100%", height: "100%", backgroundColor: theme.palette.white.main, padding: 2, borderRadius: "8px" }}>
       <Box className="text-right">{"نام کاربری و رمز عبور"}</Box>
       <Box
         sx={{
@@ -34,6 +35,7 @@ const OperatorLoginData = (props: Props) => {
         }}
       >
         <TextField
+        dir='rtl'
           placeholder="نام کاربری"
           value={loginData.username}
           onChange={(e) => handleOperatorUserName(e)}
@@ -41,6 +43,7 @@ const OperatorLoginData = (props: Props) => {
         />
 
         <TextField
+        dir='rtl'
           placeholder="رمز عبور"
           value={loginData.password}
           onChange={(e) => handleOperatorPassword(e)}
