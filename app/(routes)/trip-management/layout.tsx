@@ -1,3 +1,4 @@
+import Layout from "@/app/_components/Layout/layout";
 
 export const metadata = {
   title: "Taxi 8 Support Panel",
@@ -10,8 +11,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <Layout>
     <section className="fullSize p-5">
       {children}
     </section>
+    </Layout>
   );
 }

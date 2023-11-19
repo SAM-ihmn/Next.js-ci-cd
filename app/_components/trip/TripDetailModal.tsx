@@ -18,25 +18,54 @@ const generateItemList = (selectedItem: TripDataType | null) => ({
   ],
   driver: [
     { itemTitle: "نام و نام خانوادگی", itemValue: selectedItem?.driver.name },
-    { itemTitle: "کدملی", itemValue: selectedItem?.driver.name },
-    { itemTitle: "شماره تماس", itemValue: selectedItem?.driver.name },
-    { itemTitle: "معلولیت", itemValue: selectedItem?.driver.name },
-    { itemTitle: "مدل خودرو", itemValue: selectedItem?.driver.name },
-    { itemTitle: "شماره پلاک", itemValue: selectedItem?.driver.name },
+    { itemTitle: "کدملی", itemValue: '۵۸۳۶۹۸۴۵۲۰'
+    //  selectedItem?.driver.name
+     },
+    { itemTitle: "شماره تماس", itemValue: '۰۹۱۹۷۱۲۴۹۸۸'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "معلولیت", itemValue: 'ندارد'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "مدل خودرو", itemValue: 'پژو ۲۰۶'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "شماره پلاک", itemValue: '1256 P 25'
+    // selectedItem?.driver.name 
+  },
   ],
   passenger: [
-    { itemTitle: "نام و نام خانوادگی", itemValue: selectedItem?.driver.name },
-    { itemTitle: "کدملی", itemValue: selectedItem?.driver.name },
+    { itemTitle: "نام و نام خانوادگی", itemValue: 'رضا محمدی'
+    // selectedItem?.driver.name
+   },
+    { itemTitle: "کدملی", itemValue: '۵۸۳۶۹۸۴۵۲۰'
+    // selectedItem?.driver.name 
+  },
     { itemTitle: "شماره تماس", itemValue: selectedItem?.driver.name },
-    { itemTitle: "معلولیت", itemValue: selectedItem?.driver.name },
+    { itemTitle: "معلولیت", itemValue: 'نابینا'
+    // selectedItem?.driver.name 
+  },
   ],
   transactions: [
-    { itemTitle: "هزینه سفر", itemValue: selectedItem?.driver.name },
-    { itemTitle: "دریافتی راننده", itemValue: selectedItem?.driver.name },
-    { itemTitle: "کد تخفیف", itemValue: selectedItem?.driver.name },
-    { itemTitle: "نحوه پرداخت", itemValue: selectedItem?.driver.name },
-    { itemTitle: "انعام راننده", itemValue: selectedItem?.driver.name },
-    { itemTitle: "کمک به خیریه", itemValue: selectedItem?.driver.name },
+    { itemTitle: "هزینه سفر", itemValue: '۱۰۰۰۰۰'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "دریافتی راننده", itemValue: '۵۰۰۰۰'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "کد تخفیف", itemValue: '...'
+    // selectedItem?.driver.name 
+  },
+
+    { itemTitle: "نحوه پرداخت", itemValue: 'کارت به کارت'
+    // selectedItem?.driver.name
+   },
+    { itemTitle: "انعام راننده", itemValue: '...'
+    // selectedItem?.driver.name 
+  },
+    { itemTitle: "کمک به خیریه", itemValue: '...'
+    // selectedItem?.driver.name
+   },
   ],
 });
 
@@ -74,17 +103,17 @@ const TripDetailModal = (props: TripDetailModalProps) => {
 
           <div className="w-full flex flex-row-reverse py-1">
             <div className="w-1/4 text-right">{' مبدا'}</div>
-            <div className="w-3/4 rounded-md bg-grayBackground"></div>
+            <div dir="rtl" className="w-3/4 rounded-md bg-grayBackground px-2">{'سهروردی شمالی,بن بست بیشه,پلاک ۹'}</div>
           </div>
 
           <div className="w-full flex flex-row-reverse py-1">
             <div className="w-1/4 text-right">{' مقصد'}</div>
-            <div className="w-3/4 rounded-md bg-grayBackground"></div>
+            <div dir="rtl" className="w-3/4 rounded-md bg-grayBackground px-2">{'میدان ونک, خیابان ولیعصر, خیابان شریفی, پلاک ۳۰'}</div>
           </div>
 
           <div className="w-full flex flex-row-reverse py-1">
             <div className="w-1/4 text-right">{' مقصد دوم'}</div>
-            <div className="w-3/4 rounded-md bg-grayBackground"></div>
+            <div dir="rtl" className="w-3/4 rounded-md bg-grayBackground px-2">{'...'}</div>
           </div>
 
         </DetailsSection>

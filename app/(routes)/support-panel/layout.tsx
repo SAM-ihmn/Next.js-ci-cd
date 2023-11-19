@@ -10,11 +10,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <Layout>
-    <section className="fullSize p-5">
-      {children}
-    </section>
-    </Layout>
-  );
+  return <Layout>{children}</Layout>;
 }

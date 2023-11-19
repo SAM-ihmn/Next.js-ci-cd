@@ -1,3 +1,4 @@
+import Layout from "@/app/_components/Layout/layout";
 import { supportHeaderTitles, ticket } from "@/app/_components/_data/data";
 import Table from "@/app/_components/table/Table";
 import SupportRows from "@/app/_components/table/TableRow/SupportRows";
@@ -12,6 +13,7 @@ export const ticketTypes = ["رسیدگی به اعتراضات", "امور ما
 
 const page = (props: Props) => {
   return (
+    
     <div className="fullSize flex flex-col gap-2 p-5">
       <ToolBar title="پنل پشتیبانی" hidden={true}>
         <SearchBox selectFieldTitle="دسته بندی تیکت">
@@ -25,6 +27,7 @@ const page = (props: Props) => {
         <SupportRows tickets={ticket} />
       </Table>
     </div>
+    
   );
 };
 

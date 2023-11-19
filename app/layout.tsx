@@ -18,7 +18,7 @@ export default function RootLayout({
 
     <html className="fullSize bg-grayBackground " lang="fa">
       <body className="fullSize">
-        <Layout>{children}</Layout>
+        {children}
       </body>
     </html>
     </ThemeRegistry>

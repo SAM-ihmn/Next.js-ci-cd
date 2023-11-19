@@ -49,7 +49,7 @@ const DrawerMenu = (props: Props) => {
       )}
     </div>
     <Divider/>
-    <div>LogOut</div>
+    <div className="cursor-pointer" onClick={() => router.push('/login')}>LogOut</div>
   </div>;
 };
 

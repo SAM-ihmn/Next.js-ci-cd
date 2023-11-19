@@ -17,10 +17,11 @@ const [state, setState] = useState<boolean>(false)
     setState(false)
   }
   
+  // let time = new Date ().getTime()
 
   return (
     <div className="w-full h-16 flex justify-between items-center px-5">
-      <div>10:23</div>
+      <div>{""}</div>
       <div className="flex gap-3">
         <div className="hidden lg:flex items-center">
           <Avatar/>

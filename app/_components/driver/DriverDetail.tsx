@@ -68,7 +68,7 @@ const DriverDetail = (props: Props) => {
           </div>
           <div className="w-full lg:w-1/2 flex flex-row-reverse gap-2">
             <div>{"شماره پلاک"}</div>
-            <div>{"۴۰۵"}</div>
+            <div>{"۲۵۶۸ p ۳۱"}</div>
           </div>
 
         </div>
@@ -79,21 +79,21 @@ const DriverDetail = (props: Props) => {
         <div className="w-full flex flex-col lg:flex-row-reverse">
           <div className="w-full lg:w-1/2 flex flex-row-reverse gap-2">
             <div>{"تاریخ عضویت"}</div>
-            <div>{"۴۰۵"}</div>
+            <div>{"۱۴۰۲−۰۲−۳۱"}</div>
           </div>
           <div className="w-full lg:w-1/2 flex flex-row-reverse gap-2">
             <div>{"تعداد سفرهای انجام شده"}</div>
-            <div>{"45"}</div>
+            <div>{"۲۳"}</div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse">
           <div className="w-full lg:w-1/2 flex flex-row-reverse gap-2">
             <div>{"امتیاز کسب شده"}</div>
-            <div>{"۴۰۵"}</div>
+            <div>{"۸"}</div>
           </div>
           <div className="w-full lg:w-1/2 flex flex-row-reverse gap-2">
             <div>{"درامد خالص"}</div>
-            <div>{"250000000"}</div>
+            <div>{"۲۰,۰۰۰,۰۰۰"}</div>
           </div>
         </div>
       </div>
