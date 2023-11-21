@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: yekan;
+  src: url('../../public/fonts/Yekan.eot');
+  src: url('../../public/fonts/Yekan.eot?#iefix') format('FontName-opentype'),
+       url('../../public/fonts/Yekan.woff') format('woff'),
+       url('../../public/fonts/Yekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: yekan;
+}
+
+h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+@layer components {
+  .fullSize {
+    @apply w-full h-full
+  }
+
+  .grayBorder {
+    @apply border border-solid border-grayBackgroundDarker rounded-md
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+}
