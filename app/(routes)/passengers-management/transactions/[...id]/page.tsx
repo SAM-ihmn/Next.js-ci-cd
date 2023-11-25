@@ -11,7 +11,7 @@ type Props = {};
 
 export function generateStaticParams() {
   //define params
-  return PassengersData.map ((passenger) => {id : driver.code})
+  return PassengersData.map ((passenger) => {id : passenger.code})
 }
 
 const page = ({ params }: { params: { id: number } }) => {
