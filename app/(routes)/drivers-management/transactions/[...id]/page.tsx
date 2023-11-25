@@ -5,12 +5,16 @@ import SearchBox from '@/app/_components/tool-bar/SearchBox'
 import ToolBar from '@/app/_components/tool-bar/ToolBar'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  params: {
+    id: number;
+  };
+};
 
-const page = () => {
+const page = ({ params }: Props) => {
 
   return (
-    <div className="fullSize flex flex-col gap-2">
+    <div key={params.id} className="fullSize flex flex-col gap-2">
     <ToolBar title="تراکنش های راننده" hidden={true } hiddenNewTicket={true}>
       <SearchBox selectFieldTitle="نوع کاربر" hiddenSelectPart={true}/>
     </ToolBar>
