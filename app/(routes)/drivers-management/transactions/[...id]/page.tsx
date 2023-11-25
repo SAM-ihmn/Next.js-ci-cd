@@ -16,14 +16,11 @@ type Props = {
 
 export function generateStaticParams() {
   //define params
-const drivers = DriversData
-  return id = DriversData.map
+  return DriversData.map ((driver) => {id : driver.id})
 }
 
-
-
 const page = ({ params }: Props) => {
-
+const {id} = params
   return (
     <div key={params.id} className="fullSize flex flex-col gap-2">
     <ToolBar title="تراکنش های راننده" hidden={true } hiddenNewTicket={true}>
