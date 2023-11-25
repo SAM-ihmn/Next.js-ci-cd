@@ -9,9 +9,9 @@ import React from "react";
 
 type Props = {};
 
-export const ticketTypes = ["رسیدگی به اعتراضات", "امور مالی"];
 
 const page = (props: Props) => {
+  const ticketTypes = ["رسیدگی به اعتراضات", "امور مالی"];
   return (
     
     <div className="fullSize flex flex-col gap-2 p-5">
