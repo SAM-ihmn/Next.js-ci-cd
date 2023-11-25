@@ -1,3 +1,5 @@
+'use client'
+
 import {driverTransactionsTableHeader } from '@/app/_components/_data/drivers'
 import Table from '@/app/_components/table/Table'
 import DriverTransactionsRows from '@/app/_components/table/TableRow/DriverTransactionsRows'
