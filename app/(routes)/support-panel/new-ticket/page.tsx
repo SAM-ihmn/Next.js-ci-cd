@@ -21,7 +21,7 @@ type ResponsibleOperator = {
   department: string;
 };
 
-const page = () => {
+export default function Page() {
 const router = useRouter()
 
   // states
@@ -87,5 +87,3 @@ const router = useRouter()
     </div>
   );
 };
-
-export default page;

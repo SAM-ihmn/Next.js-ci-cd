@@ -21,7 +21,7 @@ const page = (props: Props) => {
 
       <SearchBox selectFieldTitle="وضعیت سفر">
         {tripStatus.map((trip) => 
-          <MenuItem value={trip.id}>{trip.status}</MenuItem>
+          <MenuItem key={trip.id} value={trip.id}>{trip.status}</MenuItem>
         )}
         </SearchBox>
         

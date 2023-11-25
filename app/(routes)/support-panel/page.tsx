@@ -7,18 +7,14 @@ import ToolBar from "@/app/_components/tool-bar/ToolBar";
 import { MenuItem } from "@mui/material";
 import React from "react";
 
-type Props = {};
-
-export const ticketTypes = ["رسیدگی به اعتراضات", "امور مالی"];
-
-const page = (props: Props) => {
+export default function Page() {
+  const ticketTypes = ["رسیدگی به اعتراضات", "امور مالی"];
   return (
-    
     <div className="fullSize flex flex-col gap-2 p-5">
       <ToolBar title="پنل پشتیبانی" hidden={true}>
         <SearchBox selectFieldTitle="دسته بندی تیکت">
           {ticketTypes.map((team, index) => (
-            <MenuItem value={index}>{team}</MenuItem>
+            <MenuItem key={index} value={index}>{team}</MenuItem>
           ))}
         </SearchBox>
       </ToolBar>
@@ -27,8 +23,5 @@ const page = (props: Props) => {
         <SupportRows tickets={ticket} />
       </Table>
     </div>
-    
   );
-};
-
-export default page;
+}

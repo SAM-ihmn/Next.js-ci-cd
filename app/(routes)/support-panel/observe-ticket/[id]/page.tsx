@@ -10,7 +10,7 @@ import React, { useState } from "react";
 
 type Props = {};
 
-const page = ({ params }: { params: { id: number } }) => {
+export default function Page ({ params }: { params: { id: number } }){
   const [message, setMessage] = useState("");
   const router = useRouter();
 
@@ -160,5 +160,3 @@ const page = ({ params }: { params: { id: number } }) => {
     </div>
   );
 };
-
-export default page;

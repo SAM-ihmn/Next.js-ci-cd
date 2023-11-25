@@ -14,7 +14,7 @@ const page = () => {
       <ToolBar title="لیست رانندگان" hidden={true} hiddenNewTicket={true}>
         <SearchBox selectFieldTitle="نوع کاربر">
           {driverStatus.map((status, index) => (
-            <MenuItem value={index}>{status}</MenuItem>
+            <MenuItem key={index} value={index}>{status}</MenuItem>
           ))}
         </SearchBox>
       </ToolBar>

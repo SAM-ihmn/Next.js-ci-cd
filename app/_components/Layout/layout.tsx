@@ -10,6 +10,7 @@ type Props = {}
 const Layout = ({children}: {children:React.ReactNode}) => {
 
   const router = useRouter();
+  if (typeof window === "object") {
 
   if (window.localStorage.getItem("token")) {
   return (
@@ -21,6 +22,6 @@ const Layout = ({children}: {children:React.ReactNode}) => {
       </div>
     </div>
   )} else router.push('/login')
-}
+}}
 
 export default Layout

@@ -17,7 +17,7 @@ const page = (props: Props) => {
       <ToolBar title="لیست اپراتورها" hiddenNewTicket={true}>
         <SearchBox selectFieldTitle="نوع کاربر">
           {operatorTeams.map((team) => 
-            <MenuItem value={team.id}>{team.teamName}</MenuItem>
+            <MenuItem key={team.id} value={team.id}>{team.teamName}</MenuItem>
         )}
         </SearchBox>
       </ToolBar>

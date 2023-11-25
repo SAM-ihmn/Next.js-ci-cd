@@ -29,7 +29,9 @@ const SideBar = (props: Props) => {
   };
 
   const handleLogout = () => {
+    if (typeof window === "object") {
     window.localStorage.removeItem("token")
+    }
     router.push('/login')
   }
 

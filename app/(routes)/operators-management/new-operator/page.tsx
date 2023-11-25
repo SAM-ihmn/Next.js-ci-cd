@@ -6,9 +6,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import NewOperator from "@/app/_components/newOperator/NewOperator";
 
-type Props = {};
 
-const page = (props: Props) => {
+export default function Page() {
   const router = useRouter();
 
   const backButton = () => {
@@ -35,5 +34,3 @@ const page = (props: Props) => {
     </>
   );
 };
-
-export default page;
