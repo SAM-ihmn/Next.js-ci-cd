@@ -13,7 +13,7 @@ const PassengerRows = () => {
     nationalCode: null,
     phoneNumber: null,
     disability: null,
-    status:'غیرفعال'
+    status:"فعال"
   }
 
   const [open, setOpen] = useState(false)
