@@ -7,7 +7,7 @@ import React from 'react'
 
 type Props = {}
 
-const page = ({ params }: { params: { id: number } }) => {
+const page = () => {
 
   return (
     <div className="fullSize flex flex-col gap-2">
