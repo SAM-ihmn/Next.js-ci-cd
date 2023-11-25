@@ -46,5 +46,5 @@ export type PassengerDataType = {
   nationalCode: string | null,
   phoneNumber: string | null,
   disability: string | null,
-  status: 'فعال' | 'بررسی مدارک'| 'غیرفعال'
+  status: any
 }
