@@ -14,7 +14,7 @@ type Props = {
 
 export function generateStaticParams() {
   //define params
-  return DriversData.map ((driver) => {id : driver.id})
+  return DriversData.map((driver) => {id : driver.code})
 }
 
 const page = ({ params }: Props) => {
