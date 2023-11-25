@@ -4,7 +4,7 @@ import DriverTransactionsRows from '@/app/_components/table/TableRow/DriverTrans
 import SearchBox from '@/app/_components/tool-bar/SearchBox'
 import ToolBar from '@/app/_components/tool-bar/ToolBar'
 import React from 'react'
-import { DriversData, DriverDataType } from "../../../../../_components/_data/data";
+import { DriversData } from '@/app/_components/_data/data';
 
 type Props = {
   params: {
