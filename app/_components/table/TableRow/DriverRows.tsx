@@ -71,7 +71,7 @@ const DriverRows = () => {
             <Button fullWidth sx={{backgroundColor: theme.palette.blue.main}}>{'مشاهده مدارک'}</Button>
           </div>
           <div className="flex-1">
-            <Button fullWidth sx={{ backgroundColor: theme.palette.blue.main}} onClick={() => router.push(`/drivers-management/transactions/${selectedDriver?.code}`)}>{'مشاهده تراکنش ها'}</Button>
+            <Button fullWidth sx={{ backgroundColor: theme.palette.blue.main}} onClick={() => router.push(`/drivers-management/transactions/`)}>{'مشاهده تراکنش ها'}</Button>
           </div>
         </div>
         </div>

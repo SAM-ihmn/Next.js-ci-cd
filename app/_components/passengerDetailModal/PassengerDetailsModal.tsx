@@ -82,7 +82,7 @@ const PassengerDetailsModal = (props: Props) => {
               fullWidth
               sx={{ backgroundColor: theme.palette.blue.main }}
               onClick={() =>
-                router.push(`/passengers-management/transactions/${selectedPassengerData.code}`)
+                router.push(`/passengers-management/transactions/`)
               }>
               {"مشاهده تراکنش ها"}
             </Button>

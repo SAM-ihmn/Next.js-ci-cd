@@ -33,7 +33,7 @@ const SupportRows = (props: Props) => {
               ? "bg-powderBlue"
               : "bg-grayBackgroundDarker"
           } `}
-          onClick={() => router.push(`/support-panel/observe-ticket/${ticket.code}`)
+          onClick={() => router.push(`/support-panel/observe-ticket/`)
         }
         >
           <div className="w-full flex flex-row-reverse lg:flex-1 lg:text-center">
